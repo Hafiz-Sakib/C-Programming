@@ -6,7 +6,6 @@ int main()
 
     int size = sizeof prices / sizeof prices[4];
 
-    printf("%d
-    ", size); /* 5 */
+    printf("%d", size); /* 5 */
     return 0;
 }
