@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n, i, position;
+    int n, i, position = -1;
     printf("How many numbers you want to input?: \n");
     scanf("%d", &n);
     int numbers[n];
@@ -19,16 +19,18 @@ int main()
     {
         if (findOut == numbers[i])
         {
-            printf("Yes!Your Desired Number is Present in the List\n");
+            printf("Yes!Your Desired Number %d is Present in the List\n", findOut);
             position = i + 1;
-            printf("The Position of your desired Number is %d", position);
             break;
         }
-        else
-        {
-            printf("Sorry,Your Desired Number is not in the list!");
-            break;
-        }
+    }
+    if (position == -1)
+    {
+        printf("Sorry,Your Desired Number %d is not in the list!", findOut);
+    }
+    else
+    {
+        printf("The Position of your desired Number is %d", position);
     }
 
     return 0;
