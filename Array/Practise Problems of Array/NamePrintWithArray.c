@@ -2,6 +2,8 @@
 #include <string.h>
 int main()
 {
+
+    // name print with array
     int n;
     printf("How Many Characters in your name?\n");
     scanf("%d", &n);
