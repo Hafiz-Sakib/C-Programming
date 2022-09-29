@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 int main()
 {
     int n, i;
@@ -18,30 +19,21 @@ int main()
 
     printf("\n");
 
-    int maximum = array[0];
-    int secondLarge;
+    int maximum, secondLarge;
+    maximum = secondLarge = INT_MIN;
     for (i = 0; i < n; i++)
     {
         if (array[i] > maximum)
         {
+            secondLarge = maximum;
             maximum = array[i];
         }
-    }
-    for (i = 0; i < n; i++)
-    {
-        if (array[i] < maximum)
-        {
-            secondLarge = array[i];
-            break;
-        }
-    }
-    for (i = 0; i < n; i++)
-    {
-        if (array[i] > secondLarge && array[i] < maximum)
+        else if (array[i] > secondLarge && array[i] < maximum)
         {
             secondLarge = array[i];
         }
     }
+
     printf("%d is the second large", secondLarge);
 
     return 0;
