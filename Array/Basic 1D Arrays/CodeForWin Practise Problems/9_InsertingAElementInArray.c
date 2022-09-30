@@ -26,7 +26,7 @@ int main()
     printf("Enter the Position You Want to Insert :\n");
     scanf("%d", &position);
 
-    if (position >= (n + 1) || position < 0)
+    if (position > (n + 1) || position < 0)
     {
         printf("Invalid Position to Insert a Element");
     }
