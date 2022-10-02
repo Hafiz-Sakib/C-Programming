@@ -33,17 +33,17 @@ int main()
     else
     {
         //সবার ডানপাশ থেকে লুপ শুরু করতে হবে এবং পজিশন ১ বাড়িয়ে নতুন পজিশনে আগের এলিমেন্ট পাস করতে হবে ,নিচের লুপ টা মূলত এজন্যই চালানো হয়েছে..
-        for (i = (n - 1); i >= position; i--)
+        for (i = n - 1; i >= position; i--)
         {
             array[i + 1] = array[i];
         }
-    }
 
-    array[position] = element;
+        array[position] = element;
 
-    for (i = 0; i < n + 1; i++)
-    {
-        printf("%d ", array[i]);
+        for (i = 0; i < n + 1; i++)
+        {
+            printf("%d ", array[i]);
+        }
     }
 
     return 0;
