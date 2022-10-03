@@ -1,11 +1,12 @@
 #include <stdio.h>
 int main()
 {
-    int size, MAX = 1000, i, j, temp;
-    int array[MAX];
+    int size, i, j, count = 0;
 
     printf("Enter The Array Size :\n");
     scanf("%d", &size);
+
+    int array[size], frequency[size];
 
     for (i = 0; i < size; i++)
     {
@@ -18,24 +19,31 @@ int main()
         printf("%d ", array[i]);
     }
 
-    // Sorting in Ascending Order
+    printf("\n");
 
     for (i = 0; i < size; i++)
     {
-        for (j = i + 1; j < size; j++)
+        count = 1;
+        if (array[i] != -1)
         {
-            if (array[i] > array[j])
+            for (j = (i + 1); j < size; j++)
             {
-                temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                if (array[i] == array[j])
+                {
+                    count++;
+                    array[j] = -1;
+                }
             }
+            frequency[i] = count;
         }
     }
-    printf("\nNumbers of Your Array after sort are:\n");
+
     for (i = 0; i < size; i++)
     {
-        printf("%d ", array[i]);
+        if (array[i] != -1)
+        {
+            printf("%d is present %d times\n", array[i], frequency[i]);
+        }
     }
 
     return 0;
