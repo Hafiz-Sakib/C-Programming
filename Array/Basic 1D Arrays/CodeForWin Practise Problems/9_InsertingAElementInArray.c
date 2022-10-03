@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <limits.h>
 int main()
 {
-    int n, i;
-    printf("Enter The Array Size :\n");
+    int n, i, max = 1000;
+    int array[max];
+
+    printf("Enter The Array Size Between (1-1000) :\n");
     scanf("%d", &n);
-    int array[n];
 
     for (i = 0; i < n; i++)
     {
@@ -38,7 +40,7 @@ int main()
             array[i + 1] = array[i];
         }
 
-        array[position] = element;
+        array[position - 1] = element;
 
         for (i = 0; i < n + 1; i++)
         {
