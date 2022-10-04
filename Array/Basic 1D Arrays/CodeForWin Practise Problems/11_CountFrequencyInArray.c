@@ -27,9 +27,9 @@ int main()
         count = 1;
         if (array[i] != min)
         {
-            for (j = (i + 1); j < size; j++)
+            for (j = 0; j < size; j++)
             {
-                if (array[i] == array[j])
+                if (array[i] == array[j] && i != j)
                 {
                     count++;
                     array[j] = min;
