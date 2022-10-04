@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 void uniqeElements(int arr[], int size);
 int main()
 {
@@ -32,15 +33,18 @@ void uniqeElements(int arr[], int size)
     int i, j;
     for (i = 0; i < size; i++)
     {
-        int count = 0;
+        bool matchFound = false;
+
         for (j = 0; j < size; j++)
+
         {
-            if (arr[j] == arr[i])
+            if (arr[i] == arr[j] && i != j) //প্রত্যেকবার সব এলিমেন্টের সাথে চেক করে দেখা লাগবে
             {
-                count++;
+                matchFound = true;
             }
         }
-        if (count == 1)
+
+        if (!matchFound)
         {
             printf("%d ", arr[i]);
         }
