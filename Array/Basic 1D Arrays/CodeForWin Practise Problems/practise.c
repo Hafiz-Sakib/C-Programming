@@ -25,25 +25,25 @@ int main()
     for (i = 0; i < size; i++)
     {
         count = 1;
-        if (array[i] != min)
+        if (array[i] != -1)
         {
             for (j = (i + 1); j < size; j++)
             {
                 if (array[i] == array[j])
                 {
                     count++;
-                    array[j] = min;
+                    array[j] = -1;
                 }
             }
-            frequency[i] = count;
         }
+        frequency[i] = count;
     }
 
     for (i = 0; i < size; i++)
     {
-        if (array[i] != min)
+        if (array[i] != -1)
         {
-            printf("%d is present %d times\n", array[i], frequency[i]);
+            printf("%d is present %d times", array[i], frequency[i]);
         }
     }
 
