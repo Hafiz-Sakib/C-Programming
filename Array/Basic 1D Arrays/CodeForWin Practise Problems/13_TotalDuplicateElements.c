@@ -1,11 +1,13 @@
 #include <stdio.h>
+void duplicateElements(int arr[], int size);
 int main()
 {
-    int size, MAX = 1000, i, j, temp;
-    int array[MAX];
+    int size, i, j;
 
     printf("Enter The Array Size :\n");
     scanf("%d", &size);
+    int array[size];
+    int uniqeArray[size];
 
     for (i = 0; i < size; i++)
     {
@@ -13,30 +15,31 @@ int main()
         scanf("%d", &array[i]);
     }
     printf("Numbers of Your Array are:\n");
+
     for (i = 0; i < size; i++)
     {
         printf("%d ", array[i]);
     }
 
-    // Sorting in Ascending Order
+    duplicateElements(array, size);
+
+    return 0;
+}
+void duplicateElements(int arr[], int size)
+{
+    int i, j, count;
 
     for (i = 0; i < size; i++)
     {
-        for (j = i + 1; j < size; j++)
+        for (j = (i + 1); j < size; j++)
         {
-            if (array[i] < array[j])
+            if (arr[i] == arr[j])
             {
-                temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                count++;
+                break;
             }
         }
     }
-    printf("\nNumbers of Your Array after sort are:\n");
-    for (i = 0; i < size; i++)
-    {
-        printf("%d ", array[i]);
-    }
 
-    return 0;
+    printf("\nTotal number of duplicate elements found in array = %d", count);
 }
