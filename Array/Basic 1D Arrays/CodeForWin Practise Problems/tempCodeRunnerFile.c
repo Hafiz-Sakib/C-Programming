@@ -1,1 +1,1 @@
-printf("%d", array[i + 1]);
+
