@@ -1,8 +1,9 @@
 #include <stdio.h>
 int IncrementalSort(int arr[], int size);
+void DisplayMergedArray(int arr1[], int arr2[], int size1, int size2);
 int main()
 {
-    int size1, size2, MAX = 1000, i, j, temp;
+    int size1, size2, MAX = 1000, i;
     int array1[MAX];
     int array2[MAX];
 
@@ -53,6 +54,8 @@ int main()
         printf("%d ", array2[i]);
     }
 
+    DisplayMergedArray(array1, array2, size1, size2);
+
     return 0;
 }
 int IncrementalSort(int arr[], int size)
@@ -71,4 +74,44 @@ int IncrementalSort(int arr[], int size)
         }
     }
     return arr[size];
+}
+
+void DisplayMergedArray(int arr1[], int arr2[], int size1, int size2)
+{
+    int newSize = size1 + size2;
+    int array3[newSize];
+    int i, j, k;
+    i = j = k = 0;
+
+    while (i < size1 && j < size2)
+    {
+        if (arr1[i] < arr2[j])
+        {
+            array3[k] = arr1[i];
+            i++;
+            k++;
+        }
+        else
+        {
+            array3[k] = arr2[j];
+            j++;
+            k++;
+        }
+    }
+
+    while (i < size1)
+    {
+        array3[k++] = arr1[i++];
+    }
+    while (j < size2)
+    {
+        array3[k++] = arr2[j++];
+    }
+
+    printf("\nNew Merged Sorted Array is :\n");
+
+    for (i = 0; i < newSize; i++)
+    {
+        printf("%d ", array3[i]);
+    }
 }
