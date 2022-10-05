@@ -1,48 +1,36 @@
 #include <stdio.h>
-void uniqeElements(int arr[], int size);
 int main()
 {
-    int size, i, j;
+    int size, MAX = 1000, i, j, temp;
+    int array[MAX];
 
     printf("Enter The Array Size :\n");
     scanf("%d", &size);
-    int array[size];
-    int uniqeArray[size];
 
     for (i = 0; i < size; i++)
     {
         printf("Enter %d no number :\n", (i + 1));
         scanf("%d", &array[i]);
     }
-    printf("Numbers of Your Array are:\n");
-
+    printf("Numbers of Your Array Are:\n");
     for (i = 0; i < size; i++)
     {
         printf("%d ", array[i]);
     }
 
-    printf("\nUniqe Numbers of Your Array are:\n");
+    int arr[size];
+    j = 0;
+    for (i = size - 1; i >= 0; i--)
+    {
+        arr[j] = array[i];
+        j++;
+    }
 
-    uniqeElements(array, size);
-
-    return 0;
-}
-void uniqeElements(int arr[], int size)
-{
-    int i, j;
+    printf("\nAfter Reverse:\n");
     for (i = 0; i < size; i++)
     {
-        int count = 0;
-        for (j = 0; j < size; j++)
-        {
-            if (arr[j] == arr[i])
-            {
-                count++;
-            }
-        }
-        if (count == 1)
-        {
-            printf("%d ", arr[i]);
-        }
+        printf("%d ", arr[i]);
     }
+
+    return 0;
 }
