@@ -36,7 +36,7 @@ void duplicateElements(int arr[], int size)
             if (arr[i] == arr[j])
             {
                 count++;
-                break;
+                break; // breaks only inner loop
             }
         }
     }
