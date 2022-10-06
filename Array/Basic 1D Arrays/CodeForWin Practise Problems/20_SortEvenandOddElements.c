@@ -93,3 +93,7 @@ void displaySortedEvenOdd(int a[], int size)
         printf("%d ", a[i]);
     }
 }
+
+/* Logic From :
+
+https://www.youtube.com/watch?v=HDcIsAHvqis */
