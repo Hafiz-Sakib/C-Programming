@@ -3,13 +3,8 @@
 int main()
 {
 
-    char string1[100];
-    char string2[100];
+    char string1[100], string2[100];
     printf("Enter String 1 : ");
     gets(string1);
-
-    strrev(string1);
-    printf("%s", string1);
-
     return 0;
 }
