@@ -4,7 +4,7 @@ int main()
 {
 
     char string1[100], string2[100];
-    printf("Enter String 1 : ");
+    printf("Enter The Word: ");
     gets(string1);
     int len = strlen(string1), j = 0, i;
 
