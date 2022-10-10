@@ -13,8 +13,16 @@ int main()
         string2[j] = string1[i];
         j++;
     }
-
-    printf("%s", string2);
-
+    int result = strcmp(string1, string2);
+    // If Strings are equal it will provide value 0
+    // If not equal It will provide vale 1
+    if (result == 0)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
     return 0;
 }

@@ -13,7 +13,10 @@ int main()
 
     // It Will Provide result 0 or 1.We Have to Store it and Show Output as per result using conditional Stratement
 
-    if (result = 1)
+    // 0 = same
+    // 1 = not same
+
+    if (result == 0)
     {
         printf("Yes! Both String are Same!! ");
     }
