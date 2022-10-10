@@ -1,17 +1,15 @@
 #include <stdio.h>
 int main()
 {
-    char name[100], copiedName[100], i;
-    printf("Enter string name: ");
-    gets(name);
+    char s1[100], s2[100];
+    printf("Enter string s1: ");
+    gets(s1);
 
-    for (i = 0; name[i] != '\0'; i++)
+    for (int i = 0; s1[i] != '\0'; i++)
     {
-        copiedName[i] = name[i];
+        s2[i] = s1[i];
     }
 
-    copiedName[i] = '\0';
-
-    printf("String copiedName: %s", copiedName);
+    printf("String s2: %s", s2);
     return 0;
 }
