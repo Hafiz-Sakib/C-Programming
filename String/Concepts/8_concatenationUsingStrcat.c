@@ -13,5 +13,8 @@ int main()
 
     printf("Your Full Name is : %s \n", FirstName);
 
+    //যুক্ত হবার পরে নতুন সংযুক্ত স্ট্রিং ১ম স্ট্রিং এ কপি হয়ে যাবে.
+    // That's Why printed Firstname
+
     return 0;
 }
