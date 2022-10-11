@@ -2,16 +2,12 @@
 #include <string.h>
 int main()
 {
-    char str[30];
-    printf("Enter your String(Upper case):");
-    gets(str);
-    int i = 0;
-    // convert capital letter string to small letter string
-    while (str[i] != '\0')
-    {
-        if (str[i] > 64 && str[i] < 91) // or if(str[i]>='A' && str[i]<='Z')
-            str[i] += 32;
-        i++;
-    }
-    printf("Lower case String is:%s", str);
+
+    char string1[100], string2[100];
+    printf("Enter String 1 : ");
+    gets(string1);
+    printf("Enter String 2 : ");
+    gets(string2);
+
+    return 0;
 }
