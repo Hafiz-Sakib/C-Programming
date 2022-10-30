@@ -19,7 +19,6 @@ int main()
     {
         ptr = &a[i];
         printf("%d\n", *ptr);
-        ptr++;
     }
 
     return 0;
