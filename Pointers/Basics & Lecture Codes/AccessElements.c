@@ -15,7 +15,7 @@ int main()
 
     printf("Your Array Elements Are:\n");
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         ptr = &a[i];
         printf("%d\n", *ptr);
