@@ -8,7 +8,10 @@ int main()
     // Symbol 01 => * Symbol is Used to get the value of the VAriable that the Pointer is Pointing to.
 
     int x = 5;
+
     int *ptr;
+    //যে টাইপের ডেটা টাইপ নিয়ে কাজ করবো ,পয়েন্টার ও অবশ্যই সেই ডেটা টাইপের হতে হবে!!
+
     ptr = &x;
 
     printf("Value of x : %d\n", x);
