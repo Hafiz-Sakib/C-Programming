@@ -2,10 +2,10 @@
 struct person sakib, ohid; // Global Variable
 int main()
 {
-    // Local Structure
 
     // Global Structure can be accessed from any function but  local function can be accessed only in main function
 
+    // Local Structure
     struct person
     {
         int age;
