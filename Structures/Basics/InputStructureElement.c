@@ -10,11 +10,13 @@ int main()
 {
     struct person sakib, ohid;
 
+    printf("Enter Information For Sakib : \n");
     printf("Enter Age : \n");
     scanf("%d", &sakib.age);
     printf("Enter Salary : \n");
     scanf("%f", &sakib.salary);
 
+    printf("Enter Information For Ohid: \n");
     printf("Enter Age : \n");
     scanf("%d", &ohid.age);
     printf("Enter Salary : \n");
