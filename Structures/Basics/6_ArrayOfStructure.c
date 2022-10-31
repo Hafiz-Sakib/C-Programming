@@ -20,13 +20,18 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        printf("Enter information of Student %d : \n", (i + 1));
+        printf("\nEnter information of Student %d : \n", (i + 1));
+
         printf("Enter the name of Student : \n");
+        fflush(stdin);
         gets(student[0].name);
+
         printf("Enter the age of Student : \n");
         scanf("%d", &student[i].age);
+
         printf("Enter the roll of Student : \n");
         scanf("%d", &student[i].roll);
+
         printf("Enter the CGPA of Student : \n");
         scanf("%f", &student[i].cgpa);
     }
@@ -35,7 +40,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        printf("This is the Information About  %s : \n", student[i].name);
+        printf("\nThis is the Information About  %s : \n", student[i].name);
+
         printf(" Name of Student %s: \n", student[i].name);
 
         printf("Age of %s is : %d\n", student[i].name, student[i].age);
