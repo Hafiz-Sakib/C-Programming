@@ -9,14 +9,9 @@ struct students
     float cgpa;
 };
 
-int main()
+void ReadStudents(int n)
 {
-    int n;
-    printf("Enter the numbers of students in your class : \n");
-    scanf("%d", &n);
     struct students student[n];
-
-    // This loop running for taking Input :
 
     for (int i = 0; i < n; i++)
     {
@@ -35,8 +30,11 @@ int main()
         printf("Enter the CGPA of Student : \n");
         scanf("%f", &student[i].cgpa);
     }
+}
 
-    // This loop running for Showing Outpus :
+void WriteStudent(int n)
+{
+    struct students student[n];
 
     for (int i = 0; i < n; i++)
     {
@@ -50,6 +48,18 @@ int main()
 
         printf("CGPA of %s is : %.2f\n", student[i].name, student[i].cgpa);
     }
+}
+
+int main()
+{
+    int n;
+    printf("Enter the numbers of students in your class : \n");
+    scanf("%d", &n);
+    struct students student[n];
+
+    ReadStudents(n);
+
+    WriteStudent(n);
 
     return 0;
 }
