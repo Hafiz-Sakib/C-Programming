@@ -11,7 +11,6 @@ struct students
 
 void ReadStudents(int n, struct students *student)
 {
-
     for (int i = 0; i < n; i++)
     {
         printf("\nEnter information of Student %d : \n\n", (i + 1));
