@@ -9,8 +9,9 @@ struct students
     float cgpa;
 };
 
-void ReadStudents(int n, struct students *student)
+void ReadStudents(int n)
 {
+    struct students student[n];
 
     for (int i = 0; i < n; i++)
     {
@@ -31,8 +32,25 @@ void ReadStudents(int n, struct students *student)
     }
 }
 
+/* void WriteStudents(struct students SingleStudent, int n)
+{
+    struct students student[n];
+
+    printf("\nThis is the Information About : %s\n\n", student[i].name);
+
+    printf("Name of Student : %s\n", student[i].name);
+
+    printf("Age of %s is : %d\n", student[i].name, student[i].age);
+
+    printf("Roll of %s is : %d\n", student[i].name, student[i].roll);
+
+    printf("CGPA of %s is : %.2f\n", student[i].name, student[i].cgpa);
+} */
+
 void WriteStudents(struct students student)
 {
+    // struct students student[n];
+
     printf("\nThis is the Information About : %s\n\n", student.name);
 
     printf("Name of Student : %s\n", student.name);
@@ -51,7 +69,7 @@ int main()
     scanf("%d", &n);
     struct students student[n];
 
-    ReadStudents(n, student);
+    ReadStudents(n);
 
     for (int i = 0; i < n; i++)
     {
