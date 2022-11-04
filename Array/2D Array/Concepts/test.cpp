@@ -1,90 +1,66 @@
-// A C++ program that implements Z algorithm for pattern searching
-#include <iostream>
+// Bismillahir Rahmanir Rahim
+#include <bits/stdc++.h>
+#define ull unsigned long long
+#define ll long long
+#define pb push_back
+#define mp make_pair
+#define pob pop_back
+#define in insert
+#define vi vector<ll int>
+#define vs vector<string>
+#define pii pair<ll int, ll int>
+#define psi pair<string, ll int>
+#define pis pair<ll int, string>
+#define mii map<ll int, ll int>
+#define mib map<ll int, bool>
+#define msi map<string, ll int>
+#define mis map<ll int, string>
+#define S string
+#define fi first
+#define se second
+#define space ' '
+#define newline "\n"
+#define all(data) data.begin(), data.end()
+#define b() begin()
+#define e() end()
+#define cY cout << "YES\n"
+#define cN cout << "NO\n"
+#define cy cout << "Yes\n"
+#define cn cout << "No\n"
+#define setp(n) setprecision(n)
+#define mem(arr, val) memset(arr, val, sizeof(arr));
+#define debug(x) cerr << x << dl;
+#define here fprintf(stderr, "====I am Here====\n");
+#define FOR(data) for (auto it = data.begin(); it != data.end(); it++)
+#define Boost                         \
+	ios_base::sync_with_stdio(false); \
+	cin.tie(NULL);                    \
+	cout.tie(NULL)
+#define maxx 100005
+#define EPS 1e-9
 using namespace std;
+const double PI = acos(-1);
+ll int hp = 1e9 + 7;
 
-void getZarr(string str, int Z[]);
-
-// prints all occurrences of pattern in text using Z algo
-void search(string text, string pattern)
+void Boom()
 {
-	// Create concatenated string "P$T"
-	string concat = pattern + "$" + text;
-	int l = concat.length();
-
-	// Construct Z array
-	int Z[l];
-	getZarr(concat, Z);
-
-	// now looping through Z array for matching condition
-	for (int i = 0; i < l; ++i)
-	{
-		// if Z[i] (matched region) is equal to pattern
-		// length we got the pattern
-		if (Z[i] == pattern.length())
-			cout << "Pattern found at index "
-				 << i - pattern.length() - 1 << endl;
-	}
+	// Let's Move
 }
 
-// Fills Z array for given string str[]
-void getZarr(string str, int Z[])
-{
-	int n = str.length();
-	int L, R, k;
-
-	// [L,R] make a window which matches with prefix of s
-	L = R = 0;
-	for (int i = 1; i < n; ++i)
-	{
-		// if i>R nothing matches so we will calculate.
-		// Z[i] using naive way.
-		if (i > R)
-		{
-			L = R = i;
-
-			// R-L = 0 in starting, so it will start
-			// checking from 0'th index. For example,
-			// for "ababab" and i = 1, the value of R
-			// remains 0 and Z[i] becomes 0. For string
-			// "aaaaaa" and i = 1, Z[i] and R become 5
-			while (R < n && str[R - L] == str[R])
-				R++;
-			Z[i] = R - L;
-			R--;
-		}
-		else
-		{
-			// k = i-L so k corresponds to number which
-			// matches in [L,R] interval.
-			k = i - L;
-
-			// if Z[k] is less than remaining interval
-			// then Z[i] will be equal to Z[k].
-			// For example, str = "ababab", i = 3, R = 5
-			// and L = 2
-			if (Z[k] < R - i + 1)
-				Z[i] = Z[k];
-
-			// For example str = "aaaaaa" and i = 2, R is 5,
-			// L is 0
-			else
-			{
-				// else start from R and check manually
-				L = i;
-				while (R < n && str[R - L] == str[R])
-					R++;
-				Z[i] = R - L;
-				R--;
-			}
-		}
-	}
-}
-
-// Driver program
 int main()
 {
-	string text = "GEEKS FOR GEEKS";
-	string pattern = "GEEK";
-	search(text, pattern);
+	Boost;
+
+	int a, b;
+	cin >> a >> b;
+	if (a > b)
+	{
+		cout << (a - b) << "\n";
+	}
+	else
+	{
+		cout << 0;
+	}
+
 	return 0;
 }
