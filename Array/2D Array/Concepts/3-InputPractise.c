@@ -2,10 +2,8 @@
 int main()
 {
     int row, column, i, j;
-    printf("Enter Row Size :\n");
-    scanf("%d", &row);
-    printf("Enter Column Size :\n");
-    scanf("%d", &column);
+    printf("Enter Row And Column size of Matrix : \n");
+    scanf("%d %d", &row, &column);
     int Array[row][column];
     for (i = 0; i < row; i++)
     {

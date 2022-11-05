@@ -2,17 +2,14 @@
 int main()
 {
     int row, column;
-    printf("Enter Row size : \n", &row);
-    scanf("%d", &row);
-
-    printf("Enter Column Size :\n");
-    scanf("%d", &column);
+    printf("Enter Row And Column size of Matrix A : \n");
+    scanf("%d %d", &row, &column);
 
     int a[row][column], c[100][100];
 
     // scanning A Matrix
 
-    printf("Enter elements of matrix\n");
+    printf("Enter elements of Matrix A :\n");
 
     for (int i = 0; i < row; i++)
     {
@@ -42,17 +39,14 @@ int main()
 
     printf("\n");
 
-    printf("Enter Row size : \n", &row);
-    scanf("%d", &row);
-
-    printf("Enter Column Size :\n");
-    scanf("%d", &column);
+    printf("Enter Row And Column size of Matrix B : \n");
+    scanf("%d %d", &row, &column);
 
     int b[row][column];
 
     // scanning B Matrix
 
-    printf("Enter elements of matrix\n");
+    printf("Enter elements of Matrix B :\n");
 
     for (int i = 0; i < row; i++)
     {
