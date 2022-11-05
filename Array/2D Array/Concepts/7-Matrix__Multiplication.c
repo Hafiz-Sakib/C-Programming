@@ -2,17 +2,18 @@
 int main()
 {
     int row1, column1, row2, column2;
+    int a[1000][1000], b[1000][1000], c[1000][1000];
     printf("Enter Row And Column size of Matrix A : \n");
     scanf("%d %d", &row1, &column1);
 
     printf("Enter Row And Column size of Matrix B : \n");
     scanf("%d %d", &row2, &column2);
 
-    int a[row1][column1], b[row2][column2], c[1000][1000];
+    // int a[row1][column1], b[row2][column2], c[1000][1000];
 
     while (column1 != row1)
     {
-        printf("Error!!\nMake Sure to 1st Matrix Columns and 2nd Matrix Rows are Same for Matrix Multiplication!!\nPut the Values Again Please!!\n");
+        printf("Error!!\nMake Sure to 1st Matrix Columns and 2nd Matrix Rows are Same for Matrix Multiplication!!\nPut the Values Again Please :\n");
 
         printf("Enter Row And Column size of Matrix A : \n");
         scanf("%d %d", &row1, &column1);
@@ -20,7 +21,7 @@ int main()
         printf("Enter Row And Column size of Matrix B : \n");
         scanf("%d %d", &row2, &column2);
 
-        int a[row1][column1], b[row2][column2], c[1000][1000];
+        // int a[row1][column1], b[row2][column2], c[1000][1000];
     }
 
     printf("Enter elements of Matrix A :\n");
