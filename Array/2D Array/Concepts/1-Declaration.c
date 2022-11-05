@@ -7,6 +7,7 @@ int main()
     // data_type array_name[row_size][col_size]
 
     int Array1[3][4];
+    // Totla (3 * 4) == 12  elements;
 
     // Method1 to Declare a two Dimensional Array
 
