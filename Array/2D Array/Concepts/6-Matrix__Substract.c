@@ -83,7 +83,7 @@ int main()
     printf("\n");
     // Printing C Matrix after Addition
 
-    printf("A - B = C : ");
+    printf("A - B = ");
 
     for (int i = 0; i < row; i++)
     {
@@ -91,18 +91,16 @@ int main()
         {
             c[i][j] = a[i][j] - b[i][j];
         }
-
-        printf("\n");
     }
     for (int i = 0; i < row; i++)
     {
-        printf("\t");
         for (int j = 0; j < column; j++)
         {
             printf("%d ", c[i][j]);
         }
 
         printf("\n");
+        printf("\t");
     }
 
     printf("\n");
