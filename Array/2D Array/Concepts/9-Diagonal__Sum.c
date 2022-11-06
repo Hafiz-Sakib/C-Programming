@@ -49,6 +49,7 @@ int main()
     // Do Diagonaal Sum means -- ৩ বাই  ৩ মেট্রিক্সের কোণাকুণি ভ্যালুগুলো যোগ করা ।
 
     printf("Diagonal elements are : ");
+
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
