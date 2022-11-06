@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int row1, column1, row2, column2;
+    int row1, column1, row2, column2, sum = 0;
     printf("Enter Row And Column size of Matrix A : \n");
     scanf("%d %d", &row1, &column1);
 
@@ -53,6 +53,21 @@ int main()
         printf("\n");
     }
 
+    // The number of columns in M and the number of rows in N must be the same. Then you can multiply the matrices, and the values of x and z will determine the size of the resultant. So, if matrix A is 3 × 4 and matrix B is a 4 × 2, then AB is possible since 4 = 4, and the size of the resultant matrix is 3 × 2.
+
+    for (int i = 0; i < row1; i++)
+    {
+        for (int j = 0; j < column2; j++)
+        {
+            for (int k = 0; k < column1; k++)
+            {
+                sum = sum + a[i][k] * b[k][j];
+                c[i][j] = sum;
+                sum = 0;
+            }
+        }
+    }
+
     // Printing A Matrix
 
     printf("A =");
@@ -88,17 +103,8 @@ int main()
     printf("\n");
     // Printing C Matrix after Multiplication
 
-    // The number of columns in M and the number of rows in N must be the same. Then you can multiply the matrices, and the values of x and z will determine the size of the resultant. So, if matrix A is 3 × 4 and matrix B is a 4 × 2, then AB is possible since 4 = 4, and the size of the resultant matrix is 3 × 2.
-
     printf("A * B = ");
 
-    for (int i = 0; i < row1; i++)
-    {
-        for (int j = 0; j < column2; j++)
-        {
-            c[i][j] = a[i][j] * b[i][j];
-        }
-    }
     for (int i = 0; i < row1; i++)
     {
         for (int j = 0; j < column2; j++)
