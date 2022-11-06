@@ -62,9 +62,9 @@ int main()
             for (int k = 0; k < column1; k++)
             {
                 sum = sum + a[i][k] * b[k][j];
-                c[i][j] = sum;
-                sum = 0;
             }
+            c[i][j] = sum;
+            sum = 0;
         }
     }
 
