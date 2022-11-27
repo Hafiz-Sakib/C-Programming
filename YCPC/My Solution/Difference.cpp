@@ -10,10 +10,11 @@ using namespace std;
 int main()
 {
     int a, b;
-    cin >> a >> b;
+    cin >> a >> b; // input
     int maxi = max(a, b);
     int mini = min(a, b);
     int result = maxi - mini;
     cout << result << endl;
+    
     return 0;
 }
