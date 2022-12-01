@@ -6,7 +6,7 @@ int main()
 
     printf("Enter Your Name :\n");
 
-    gets(name);
+    gets(name); // input string
 
     for (int i = 0; i < strlen(name); i++)
     {
