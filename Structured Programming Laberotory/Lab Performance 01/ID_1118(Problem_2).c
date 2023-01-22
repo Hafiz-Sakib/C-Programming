@@ -12,10 +12,11 @@ int main()
 
     switch (t / 10)
     {
-    case 4:
-    case 2:
-    case 1:
     case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
     {
         printf("Very Cold Weather\n");
         break;
