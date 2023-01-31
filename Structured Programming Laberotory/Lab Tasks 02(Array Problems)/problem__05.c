@@ -3,7 +3,7 @@ Name : Hafiz-Sakib
 Id : 0222210005101118
  */
 
-// Problem 05 : Write a C program that read n number of values and prints the maximum consecutive currentSum of 2 values.
+// Problem 05 : Write a C program that read n number of values and prints the maximum consecutive sum of 2 values.
 
 #include <stdio.h>
 int main()

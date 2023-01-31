@@ -3,7 +3,7 @@ Name : Hafiz-Sakib
 Id : 0222210005101118
  */
 
-// Write a C program that read n number of values and prints the maxSumimum sum of 2 values.
+// Problem 06 : Write a C program that read n number of values and prints the maximum sum of 2 values.
 
 #include <stdio.h>
 int main()
