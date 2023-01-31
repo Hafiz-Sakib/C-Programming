@@ -3,7 +3,7 @@ Name : Hafiz-Sakib
 Id : 0222210005101118
  */
 
-// Write a C program to read n number of values in an array and a value ‘x’.Print “Yes” if x is in the array else print “No”.
+// Problem 02 : Write a C program to read n number of values in an array and a value ‘x’.Print “Yes” if x is in the array else print “No”.
 
 #include <stdio.h>
 int main()
