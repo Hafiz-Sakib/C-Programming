@@ -20,7 +20,7 @@ int main()
         ok = 1;
         for (int j = (i + 1); j < n; j++)
         {
-            if ((a[i] == a[j]) && (j != (n - 1)))
+            if (a[i] == a[j])
             {
                 ok = 0;
                 break;
