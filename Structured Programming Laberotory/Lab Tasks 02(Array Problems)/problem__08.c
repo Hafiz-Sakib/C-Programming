@@ -8,28 +8,33 @@ Id : 0222210005101118
 #include <stdio.h>
 int main()
 {
-    int n, ok;
+    int n, k = 0, ok;
     scanf("%d", &n);
-    int a[n];
+    int a[n], uq[n];
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
     }
     for (int i = 0; i < n; i++)
     {
-        ok = 1;
-        for (int j = 0; j < i; j++)
+        ok = 0;
+        for (int j = 0; j < n; j++)
         {
-            if (a[i] == a[j])
+            if (a[j] == a[i])
             {
-                ok = 0;
-                break;
+                ok++;
             }
         }
         if (ok)
         {
-            printf("%d ", a[i]);
+            uq[k] = a[i];
+            k++;
         }
+    }
+
+    for (int i = 0; i < k; i++)
+    {
+        printf("%d ", uq[i]);
     }
 
     return 0;
