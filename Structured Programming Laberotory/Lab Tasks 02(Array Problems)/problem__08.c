@@ -17,12 +17,13 @@ int main()
     }
     for (int i = 0; i < n; i++)
     {
-        ok = 0;
-        for (int j = 0; j < n; j++)
+        ok = 1;
+        for (int j = (i + 1); j < n; j++)
         {
-            if (a[j] == a[i])
+            if ((a[i] == a[j]) && (j != (n - 1)))
             {
-                ok++;
+                ok = 0;
+                break;
             }
         }
         if (ok)
