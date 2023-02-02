@@ -44,7 +44,7 @@ Id : 0222210005101118
 #include <stdio.h>
 int main()
 {
-    int n, k = 0;
+    int n, k = 0, ok;
     scanf("%d", &n);
     int a[n], dp[n];
 
@@ -55,16 +55,20 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        for (int j = (i + 1); j < n; j++)
+        ok = 0;
+        for (int j = (i + 1); j < n - 1; j++)
         {
-            // 1 2 3 1 4
             if ((a[i] == a[j]) && (a[j] != -1))
             {
                 a[j] = -1;
+                ok = 1;
             }
         }
-        dp[k] = a[i];
-        k++;
+        if (ok)
+        {
+            dp[k] = a[i];
+            k++;
+        }
     }
     for (int i = 0; i < k; i++)
     {
