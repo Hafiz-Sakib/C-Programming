@@ -1,3 +1,12 @@
+
+/*
+Name : Hafiz Sakib
+Id : 0222210005101118
+
+*/
+
+// Problem : Write a C program to check if the given two matrices are equal or not. The matrices will have the same dimension.
+
 #include <stdio.h>
 int main()
 {

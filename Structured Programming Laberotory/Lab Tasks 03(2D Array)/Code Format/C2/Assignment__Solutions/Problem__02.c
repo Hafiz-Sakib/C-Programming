@@ -1,3 +1,11 @@
+/*
+Name : Hafiz Sakib
+Id : 0222210005101118
+
+*/
+
+// Problem : Write a C program to interchange the diagonals of a square matrix.
+
 #include <stdio.h>
 int main()
 {
