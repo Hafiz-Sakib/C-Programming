@@ -5,7 +5,7 @@ Id : 0222210005101118
 
 */
 
-// Problem : Write a C program to check if the given two matrices are equal or not. The matrices will have the same dimension.
+// Problem : Write a C program to check if the first matrix is element-wise square of the second matrix. The matrices will have the same dimension.
 
 #include <stdio.h>
 int main()
