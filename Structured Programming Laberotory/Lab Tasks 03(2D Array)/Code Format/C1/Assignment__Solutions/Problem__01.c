@@ -33,7 +33,7 @@ int main()
     {
         for (int j = 0; j < c; j++)
         {
-            if (a[i][j] != b[i][j])
+            if ((b[i][j] * b[i][j]) != a[i][j])
             {
                 f = 0;
                 break;
@@ -47,11 +47,11 @@ int main()
 
     if (f)
     {
-        printf("Both Matrices are equal\n");
+        printf("First matrix is the element-wise square of the second matrix.\n");
     }
     else
     {
-        printf("Both Matrices are not equal\n");
+        printf("First matrix is not the element-wise square of the second matrix.\n");
     }
 
     return 0;
