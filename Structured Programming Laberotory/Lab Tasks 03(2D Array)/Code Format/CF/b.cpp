@@ -24,38 +24,6 @@ using namespace std;
 
 void Boom()
 {
-    ll n, two = 0;
-    cin >> n;
-    vector<ll> v(n);
-    for (ll i = 0; i < n; i++)
-    {
-        cin >> v[i];
-        if (v[i] == 2)
-        {
-            two++;
-        }
-    }
-    if (two % 2 != 0)
-    {
-        cout << -1 << endl;
-    }
-    else
-    {
-        ll now = 0, k = -1;
-        for (ll i = 0; i < n; i++)
-        {
-            if (v[i] == 2)
-            {
-                now++;
-            }
-            if (now == two / 2)
-            {
-                k = i;
-                break;
-            }
-        }
-        cout << k + 1 << endl;
-    }
 }
 
 int main()
